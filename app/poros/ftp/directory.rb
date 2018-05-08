@@ -16,7 +16,7 @@ module Ftp
         if file_string.directory?
           Directory.new(@ftp, @path + file_string.name)
         else
-          File.new(@ftp, file_string.extension, file_string.size)
+          Ftp::File.new(@ftp, file_string.extension, file_string.size)
         end
       end
     end
