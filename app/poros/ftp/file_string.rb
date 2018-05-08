@@ -12,8 +12,11 @@ module Ftp
       @arr.last
     end
 
+    EXTENSION_REGEX = /^.+\.(.*)$/
     # implement regex
-    def extension; end
+    def extension
+      EXTENSION_REGEX.match(name) { |m| m[1] }
+    end
 
     def size
       @arr.fifth.to_i
