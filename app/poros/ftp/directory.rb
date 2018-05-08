@@ -7,7 +7,7 @@ module Ftp
 
     def traverse
       @ftp.chdir(@path.to_s)
-      list.select(&:file?) + list.select(&:directory?).traverse
+      list.select(&:file?) + list.select(&:directory?).map(&:traverse).flatten
     end
 
     def list
