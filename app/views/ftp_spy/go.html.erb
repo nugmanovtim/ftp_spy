@@ -1,0 +1,9 @@
+<h1>FtpSpy</h1>
+<p>Your report for <%= @addr %>:</p>
+<ol>
+  <% @report.each do |key, value| %>
+    <li>
+      <%= "#{key.nil? ? 'Without extension' : key }: #{value}" %>
+    </li>
+  <% end %>
+</ol>

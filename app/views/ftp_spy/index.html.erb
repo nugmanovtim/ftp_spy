@@ -1,0 +1,10 @@
+<h1>FtpSpy#</h1>
+<%= form_tag('ftp_spy/go', method: :post) do %>
+  <%= label_tag(:addr, 'Host:') %>
+  <%= text_field_tag(:addr) %>
+  <%= label_tag(:username, 'Username:') %>
+  <%= text_field_tag(:username) %>
+  <%= label_tag(:password, 'Password:') %>
+  <%= text_field_tag(:password) %>
+  <%= submit_tag('Go') %>
+<% end %>
